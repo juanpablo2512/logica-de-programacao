@@ -1,0 +1,17 @@
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: 300px;
+    }
+h2 {
+    color: brown;
+}
+.tudo {
+    background-color: rgb(112, 109, 109);
+    padding: 30px;
+    margin: 0 auto; 
+    width: 500px;
+    border-radius: 10px;
+    border-style: double;
+}
