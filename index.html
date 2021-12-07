@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica de Programação</title>
+</head>
+    <body id="fundo">
+        <div class="corpo">
+            <h1 id="resultado">Teste</h1>
+            <button type="submit" id="enviar" onclick="testar()">Testar</button>
+        </div>
+        <script>
+            function testar(){
+                let aviso = prompt(' Quanto vc recebe hoje? \n \n 1 - Entre R$ 0,00 e R$ 1000,00 \n 2 - Entre R$ 1200,00 e R$ 2500,00 \n 3 - Entre R$ 2600,00 e R$ 4000,00 \n 4 - Entre R$ 4100,00 ou mais.');
+                
+                let resultado = document.getElementById('resultado');
+                let valor = parseInt(aviso)
+                switch (valor){
+                    case 1: 
+                        alert("Você recebe 0 a 1000 reais");
+                        resultado.innerHTML=(`Você recebe abaixo de um salário minimo`);
+                        document.getElementById('fundo').style.backgroundColor=('blue');
+
+                    break;
+                    case 2:
+                        alert("Você recebe de 1200 a 2500 reais.");
+                        resultado.innerHTML=(`Você recebe acima de um salário minimo`);
+                        document.getElementById('fundo').style.backgroundColor=('gray');
+
+                    break;
+                        case 3:
+                        alert("Você recebe de 2600 a 4000 reais.");
+                        resultado.innerHTML=(`Você recebe acima de um salário minimo`);
+                        document.getElementById('fundo').style.backgroundColor=('green');
+
+                    break;
+                        case 4:
+                            alert("Voçê recebe de R$4100 ou mais.");
+                            resultado.innerHTML=(`Voçê recebe acima de um salário minimo`);
+                            document.getElementById('fundo').style.backgroundColor=('blue');
+                            
+                    break;
+                    default:
+                        resultado.innerHTML=('Valor inválido.');
+                        alert('ERROR');
+                        document.getElementById('fundo').style.backgroundColor=('red')
+                    break;
+                }
+            }
+
+        </script>
+        
+    </body>
+</html>
